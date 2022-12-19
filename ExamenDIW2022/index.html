@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Completa tu nombre -->
+    <title>NOMBRE_DEL_ALUMNO</title>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <style>
+       body {
+        background: rgb(217,145,0);
+background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, rgba(0,0,0,1) 100%);
+        }
+        .principal{
+            border:1px solid black;
+            width:70%;
+            margin:auto;
+            margin-top:10%;
+            border-radius:20px;
+            background-color: lightgray;
+            display:grid;
+            font-family: Fredoka One;
+            font-size: 16px;
+        }
+     table{
+        border: 1px orange;
+    background-color: white;
+    margin: auto;
+    min-width: 97%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 1%;
+        } 
+        th, td {
+        border: 1px solid orange;
+        }
+        tr:hover{
+            background-color:rgba(239,156,1,0.8);
+        }
+        table thead th{
+            background-color: orange;
+            color:black;
+        }
+          table td{
+            padding:1%;
+        }
+        .hombre{
+            background-color:blue; color:white; border-radius:5px;margin:1%
+        }
+        .mujer {
+            background-color:pink; color:white; border-radius:5px;margin:1%
+        }
+        .actividad{
+            background-color:grey; color:white; border-radius:5px;margin:1%
+        }
+        .arriba{
+            text-align: center;
+    border-bottom: 1px solid black;
+    line-height: 200%;
+    margin-top: 0;
+        }
+        footer{
+            text-align: center;
+    border-top: 1px solid black;
+    line-height: 200%;
+    margin-top: 0;
+    margin-bottom:0;
+        }
+        input[type=button] {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-decoration: none;
+
+  border-radius:5px;
+  margin:auto;
+  margin-bottom:1%;
+  /* margin-left: 43%;
+    margin-bottom: 2%; */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Completar html aqui -->
+    <div class="principal">
+        <h1 class="arriba">Aplicación de dietas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Sexo</th>
+                <th>Edad</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Actividad</th>
+                <th>IM Basal</th>
+                <th>Calorias necesarias</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Francisco Romero</td>
+                <td><p class="hombre">hombre</p></td>
+                <td>31</td>
+                <td>198</td>
+                <td>89</td>
+                <td><p class="actividad">moderada</p></td>
+                <td>1427kCal</td>
+                <td>1712kCal</td>
+            
+            </tr>
+            <tr>
+                <td>Jose Antonio Lara</td>
+                <td><p class="hombre">hombre</p></td>
+                <td>48</td>
+                <td>187</td>
+                <td>85</td>
+                <td><p class="actividad">moderada</p></td>
+                <td>1333kCal</td>
+                <td>1435kCal</td>
+            
+            </tr>
+            <tr>
+                <td>Jeiffer Lopez</td>
+                <td><p class="mujer">Mujer</p></td>
+                <td>45</td>
+                <td>167</td>
+                <td>56</td>
+                <td><p class="actividad">alta</p></td>
+                <td>1256kCal</td>
+                <td>1943kCal</td>
+            
+            </tr>
+            <tr>
+                <td>Francisco Romero</td>
+                <td><p class="hombre">hombre</p></td>
+                <td>31</td>
+                <td>198</td>
+                <td>89</td>
+                <td><p class="actividad">moderada</p></td>
+                <td>1427kCal</td>
+                <td>1712kCal</td>
+            
+            </tr>
+            <tr>
+                <td>Francisco Romero</td>
+                <td><p class="hombre">hombre</p></td>
+                <td>31</td>
+                <td>198</td>
+                <td>89</td>
+                <td><p class="actividad">moderada</p></td>
+                <td>1427kCal</td>
+                <td>1712kCal</td>
+            
+            </tr>
+       </tbody>      
+    </table>
+    
+    <input type="button" value="Añadir cliente">
+
+    <footer><b>Camilo González 2022</b></footer>
+
+</div>
+    <script src="static/app.js"></script>
+
+</body>
+</html>
