@@ -1,5 +1,5 @@
 # Examen Diseño de Interfaces Web
-## nombre_del_alumno
+## Camilo González Sánchez
 
 ### Instrucciones:
 
