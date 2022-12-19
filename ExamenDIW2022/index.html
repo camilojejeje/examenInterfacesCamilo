@@ -5,36 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Completa tu nombre -->
-    <title>NOMBRE_DEL_ALUMNO</title>
+    <!-- Camilo González Sánchez -->
+    <!-- El style está en el head porque por alguna razón no funciona con el css externo,
+    lo estuvimos mirando durante el examen. -->
+    <title>Camilo_González_Sánchez</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <style>
        body {
+        font-family: 'Sans Serif';
         background: rgb(217,145,0);
 background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, rgba(0,0,0,1) 100%);
         }
+        .wrapper{
+            /* display:block; */
+            visibility:visible;
+        }
+        .invisible{
+            display:none;
+        }
         .principal{
             border:1px solid black;
-            width:70%;
+            width:50%;
             margin:auto;
             margin-top:10%;
             border-radius:20px;
-            background-color: lightgray;
+            background-color: white;
             display:grid;
-            font-family: Fredoka One;
+            font-family:'Sans Serif';
             font-size: 16px;
+            z-index:0;
         }
+        
      table{
         border: 1px orange;
     background-color: white;
     margin: auto;
-    min-width: 97%;
+    min-width: 94%;
     text-align: center;
     border-collapse: collapse;
     margin-bottom: 1%;
+    
         } 
         th, td {
         border: 1px solid orange;
+        }
+        th{
+            font-family: Fredoka One;
         }
         tr:hover{
             background-color:rgba(239,156,1,0.8);
@@ -47,10 +63,10 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
             padding:1%;
         }
         .hombre{
-            background-color:blue; color:white; border-radius:5px;margin:1%
+            background-color:blue; color:white; border-radius:5px;margin:-5%;
         }
         .mujer {
-            background-color:pink; color:white; border-radius:5px;margin:1%
+            background-color:pink; color:white; border-radius:5px;margin:-5%;
         }
         .actividad{
             background-color:grey; color:white; border-radius:5px;margin:1%
@@ -60,6 +76,10 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
     border-bottom: 1px solid black;
     line-height: 200%;
     margin-top: 0;
+    background-color:lightgray;
+    border-radius:20px 20px 0px 0px;
+    font-family: Fredoka One;
+    margin-bottom:1.5%;
         }
         footer{
             text-align: center;
@@ -67,19 +87,68 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
     line-height: 200%;
     margin-top: 0;
     margin-bottom:0;
+    background-color:lightgray;
+    border-radius:0px 0px 20px 20px;
+    font-family: Fredoka One;
+    padding:8px;
         }
-        input[type=button] {
+        button {
   background-color: green;
   border: none;
   color: white;
   padding: 8px 32px;
   text-decoration: none;
 
-  border-radius:5px;
+  border-radius:10px;
   margin:auto;
   margin-bottom:1%;
-  /* margin-left: 43%;
-    margin-bottom: 2%; */
+}
+.modal {
+  display: hidden; 
+  position: fixed; 
+  z-index: 0; 
+  visibility:hidden;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0); 
+  border:0;
+  border:1px solid black;
+}   
+
+
+.modal-content {
+    margin: 9% auto;
+    padding: 20px;
+    width: 40%;
+    border-radius: 20px;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#volver{
+    background-color: grey;
+    color:white;
+}
+#añadir{
+    border: 1px solid black;
+}
+.myRadio {
+	accent-color: gray;
 }
 
     </style>
@@ -87,7 +156,8 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
 <body>
 
     <!-- Completar html aqui -->
-    <div class="principal">
+<div class="wrapper">
+    <div class="principal" id="main">
         <h1 class="arriba">Aplicación de dietas</h1>
     <table>
         <thead>
@@ -105,7 +175,7 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
         <tbody>
             <tr>
                 <td>Francisco Romero</td>
-                <td><p class="hombre">hombre</p></td>
+                <td><p class="hombre">Hombre</p></td>
                 <td>31</td>
                 <td>198</td>
                 <td>89</td>
@@ -116,7 +186,7 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
             </tr>
             <tr>
                 <td>Jose Antonio Lara</td>
-                <td><p class="hombre">hombre</p></td>
+                <td><p class="hombre">Hombre</p></td>
                 <td>48</td>
                 <td>187</td>
                 <td>85</td>
@@ -138,7 +208,7 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
             </tr>
             <tr>
                 <td>Francisco Romero</td>
-                <td><p class="hombre">hombre</p></td>
+                <td><p class="hombre">Hombre</p></td>
                 <td>31</td>
                 <td>198</td>
                 <td>89</td>
@@ -149,7 +219,7 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
             </tr>
             <tr>
                 <td>Francisco Romero</td>
-                <td><p class="hombre">hombre</p></td>
+                <td><p class="hombre">Hombre</p></td>
                 <td>31</td>
                 <td>198</td>
                 <td>89</td>
@@ -161,10 +231,47 @@ background: linear-gradient(90deg, rgba(217,145,0,1) 0%, rgba(205,158,0,1) 35%, 
        </tbody>      
     </table>
     
-    <input type="button" value="Añadir cliente">
+    
+    <button id="myBtn" onclick="crear()">Añadir cliente</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="principal">
+                <h1 class="arriba">Nuevo Cliente</h1>
+           <div style="text-align:center">
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="sexo" style="text-align:center">Sexo:</label>
+                <input type="radio" value="Hombre" id="hombre" class="myRadio" name="sexo" required>
+                <label for="sexo">Hombre</label>
+                <input type="radio" value="Mujer" id="mujer" class="myRadio" name="sexo" checked="checked" required>
+                <label for="sexo">Mujer</label><br><br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="15" max="99" value="20" required><br><br>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="edad" min="130" max="240" value="165" required><br><br>
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" name="peso" min="45" max="145" value="65" required><br><br>
+                <label for="actividad">Actividad física:</label>
+                <select id="actividad" name="actividad" required>
+                    <option value="Suave_o_sedentaria">Suave o sedentaria</option>
+                    <option value="Media">Media</option>
+                    <option value="Intensa">Intensa</option>
+                </select><br>
+                <br>
+                <footer>
+                    <button id="añadir" onclick="advertencia()">Añadir Nuevo</button>
+                    <button id="volver" onclick="cerrar()">Volver atrás</button>
+                </footer>
+            </form>
+           </div>
+        </div>
+    </div>
+    
+    
 
-    <footer><b>Camilo González 2022</b></footer>
-
+</div>
+<footer><b>Camilo González©2022</b></footer>
 </div>
     <script src="static/app.js"></script>
 
